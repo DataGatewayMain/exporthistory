@@ -171,11 +171,17 @@ app.get('/downloadCsv/:api_key/:id', (req, res) => {
 });
 
 // Start the server
-const port = process.env.PORT || 3000;
-const host = 'localhost'; // Specify the host IP address
+// const port = process.env.PORT || 3000;
+// const host = 'localhost'; // Specify the host IP address
 
-app.listen(port, host, () => {
-    console.log(`Server started on http://${host}:${port}`);
+// app.listen(port, host, () => {
+//     console.log(`Server started on http://${host}:${port}`);
+// });
+
+
+const PORT = process.env.PORT || 10000;
+app.listen(PORT, '0.0.0.0', () => {
+    console.log(`Server started on http://0.0.0.0:${PORT}`);
 });
 
 
